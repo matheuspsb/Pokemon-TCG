@@ -1,10 +1,13 @@
-import { Card } from "../../components";
+import { Action, Card } from "../../components";
+import styles from './Home.module.css';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Vite + React</h1>
-      <Card />
+    <div className={styles.container}>
+      <div className={styles.content}>
+        <Action />
+        <Card />
+      </div>
     </div>
   )
 }
