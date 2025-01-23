@@ -1,13 +1,12 @@
-import './App.css'
-import { Card } from './components'
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/index.routes";
 
 function App() {
   return (
-    <>
-      <h1>Vite + React</h1>
-      <Card />
-    </>
-  )
+    <div>
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
-export default App
+export default App;
