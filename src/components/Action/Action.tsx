@@ -1,13 +1,13 @@
 
-import { FiSearch } from 'react-icons/fi'
-import { Input } from '../Input'
-import styles from './Action.module.css'
+import { FiSearch } from 'react-icons/fi';
+import { Input } from '../Input';
+import styles from './Action.module.css';
 
-function Action() {
+function Action({ handleSearchChange }: { handleSearchChange: (e: React.ChangeEvent<HTMLInputElement>) => void }) {
   return (
     <div className={styles.container}>
       <div className={styles.search}>
-        <Input icon={<FiSearch size={20} color='#636566' />} placeholder="Pesquise um pokemon" />
+        <Input icon={<FiSearch size={20} color='#636566' />} placeholder="Pesquise um pokemon" onChange={handleSearchChange} />
       </div>
 
       <div className={styles.filter}>
