@@ -12,4 +12,17 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1360px;
+  gap: 36px;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.total span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #4d5053;
 }
