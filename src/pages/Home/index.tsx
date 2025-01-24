@@ -10,6 +10,7 @@ export default function Home() {
   const { 
     isModalOpen, 
     cardDetails,
+    isLoading: isLoadingDetails,
     handleCardClick,
     closeModal, 
   } = useCardDetails();
@@ -32,7 +33,8 @@ export default function Home() {
 
       <Modal 
         isOpen={isModalOpen} 
-        onClose={closeModal} 
+        onClose={closeModal}
+        loading={isLoadingDetails} 
         cardDetails={cardDetails} 
       />
     </div>
