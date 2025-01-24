@@ -2,11 +2,11 @@ import pokemonType from '../../assets/Vector.png'
 import { PokemonCard } from '../../global/types/pokemonCard.type'
 import styles from './Card.module.css'
 
-function Card(props: PokemonCard) {
-  const { images, name, rarity, types } = props
+function Card(props: PokemonCard & { onClick: VoidFunction }) {
+  const { images, name, rarity, types, onClick } = props
 
   return (
-    <div className={styles.card}>
+    <div onClick={onClick} className={styles.card}>
       <div className={styles.imageContainer}>
         <img src={images.large} alt='Pokemon' />
       </div>

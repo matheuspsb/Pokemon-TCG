@@ -6,7 +6,7 @@ const api = axios.create({
 });
 
 api.interceptors.request.use((config) => {
-  config.headers["X-Api-Key"] = "92bb93a7-e42b-499c-ac7b-1a4efa23c9c4";
+  config.headers["X-Api-Key"] = import.meta.env.VITE_API_KEY;
   return config;
 });
 
