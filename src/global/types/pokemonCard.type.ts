@@ -3,6 +3,7 @@ export interface PokemonCard {
   name: string;
   rarity: string;
   types: string[];
+  subtypes: string[];
   images: {
     small: string;
     large: string;
