@@ -34,6 +34,7 @@ export function useFetchCard(initialQuery: string, debounceDelay: number = 300) 
     error,
     page,
     totalPages,
+    totalCount: data?.totalCount || 0,
     setPage,
   };
 }

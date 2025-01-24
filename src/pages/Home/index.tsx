@@ -6,7 +6,7 @@ import { Pagination } from "./components/Pagination";
 import styles from "./Home.module.css";
 
 export default function Home() {
-  const { handleSearchChange, cards, isLoading, page, totalPages, setPage } =
+  const { handleSearchChange, cards, isLoading, page, totalPages, totalCount, setPage } =
     useFetchCard("", 300);
 
   const handlePageChange = (newPage: number) => {
@@ -29,7 +29,7 @@ export default function Home() {
         <Action handleSearchChange={handleSearchChange} />
         <div className={styles.total}>
           <img src={pokebola} alt="Pokebola" />
-          <span>Total: {cards.length} Pokémons</span>
+          <span>Total: {totalCount} Pokémons</span>
         </div>
         <div className={styles.cardsArea}>
           {isLoading && <Loader />}
